@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/colorPrimary"
+		android:gravity="start|center"
+		android:minHeight="?attr/actionBarSize"
+		app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+		app:navigationIcon="@drawable/ic_back"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+		>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:orientation="horizontal"
+			>
+
+			<TextView
+				style="@style/Base.TextAppearance.AppCompat.Title"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="@string/back_title"
+				android:textColor="@android:color/white"
+				/>
+
+			<TextView
+				android:id="@+id/title_menu_item"
+				style="@style/Base.TextAppearance.AppCompat.Title"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:ellipsize="end"
+				android:maxLines="1"
+				android:lines="1"
+				android:text="@string/item_9"
+				android:textColor="@android:color/white"
+				/>
+		</LinearLayout>
+	</android.support.v7.widget.Toolbar>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="vertical"
+		>
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:contentDescription="@null"
+			android:scaleType="centerCrop"
+			android:src="@drawable/quiz_bg"
+			/>
+
+		<android.support.v4.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginLeft="16dp"
+				android:layout_marginRight="16dp"
+				android:layout_marginTop="24dp"
+				android:background="@drawable/welcome_transparent_bg"
+				android:gravity="center"
+				android:orientation="vertical"
+				android:padding="16dp"
+				>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="16dp"
+					android:text="@string/title_quiz_welcome"
+					android:textSize="24sp"
+					android:textStyle="bold"
+
+					/>
+
+				<TextView
+					style="@style/Base.TextAppearance.AppCompat.Body1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="16dp"
+					android:gravity="center"
+					android:text="@string/subtitle_quiz_welcome"
+					android:textSize="12sp"
+					android:textStyle="bold"
+
+					/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dp"
+					android:baselineAligned="false"
+					android:gravity="center"
+					android:orientation="horizontal"
+					android:weightSum="1"
+					>
+
+					<FrameLayout
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight=".8"
+						>
+
+						<com.kelvin.banksecurety.views.SlideButton
+							android:id="@+id/unlockButton"
+							android:layout_width="match_parent"
+							android:layout_height="48dp"
+							android:background="@drawable/slide_button_bg"
+							android:clickable="false"
+							android:duplicateParentState="true"
+							android:max="100"
+							android:maxHeight="48dp"
+							android:minHeight="48dp"
+							android:progressDrawable="@android:color/transparent"
+							android:thumb="@drawable/ic_start_w"
+							/>
+
+						<TextView
+							android:id="@+id/btn_title"
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:layout_gravity="center"
+							android:gravity="center"
+							android:text="@string/btn_swipe_to_begin"
+							android:textColor="#fff"
+							android:textSize="16sp"
+							/>
+					</FrameLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</android.support.v4.widget.NestedScrollView>
+	</FrameLayout>
+</LinearLayout>
